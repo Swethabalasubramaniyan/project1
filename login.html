@@ -1,0 +1,93 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>
+body
+{
+    background-color: bisque;
+}
+form
+{
+    width: 38%;
+    height: auto;
+    border: 2px solid #d3ad7f;
+    box-shadow: rgb(2,5,7);
+    margin: auto;
+    border-radius: 15px;
+}
+.container
+{
+    padding: 20px;
+    position: relative;
+    left: 25px;
+}
+input[type=text], input[type=password] 
+{
+  width: 90%;
+  padding: 20px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+button {
+  background-color: #d3ad7f;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: large;
+}
+button:hover
+{
+    background-color: burlywood;
+}
+@media screen and (max-width:550px)
+{
+    form
+    {
+        width: max-content;
+    }
+}
+</style>   
+</head>    
+<body>    
+    <center> <h1>  Login  </h1> </center>   
+    <form>  
+        <div class="container">   
+            <label>E-mail : </label> <br/>  
+            <input type="text" id="email" placeholder="Enter E-mail" name="email" required> <br/> 
+            <label>Password : </label>   <br/>
+            <input type="password" id="password" placeholder="Enter Password" name="password" required>  <br/>
+            <button type="submit" id="login" onclick="logIn()"> Login  </button>  <br/>
+            <input type="checkbox" checked="checked"> Remember me  <br/>
+            <br/>
+            Forgot <a href="#"> password? </a>   
+        </div>   
+    </form>     
+    <script>
+    function logIn()
+    {
+        var email =document.getElementById("email");
+        var password=document.getElementById("password");
+
+            if(email.value ===''|| password.value ==='')
+            {
+                alert("Fill the login form")
+            }
+            else
+            {
+                alert(" successfully Login to Amor's")
+                window.open('index.html');
+            }
+        }
+    </script>
+</body>     
+</html>  
